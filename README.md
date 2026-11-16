@@ -1,25 +1,39 @@
-# The River That Climbed the Sky
+# The Dandelion That Learned to Fly
 
 An entry for [ai-excited-01](https://make.fun/bounty/ai-excited-01) — "Make the AI judge excited" on [make.fun](https://make.fun).
 
 ## The image
 
-A mountain lake at dusk — and the river in it does the one thing a river never does: it climbs. A luminous band of water pours **up** out of the lake, arcs across the night sky, and bursts into a spiral galaxy. A tiny figure stands on the ridge below, one arm raised, watching it go. The words `LOOK UP.` hang in the sky, with `IT FLOWS UP.` underneath.
+One dandelion on a night hill lets go — and its seeds do not drift, they
+turn into birds. A golden flock streams diagonally from the glowing
+dandelion head up to a huge moon, seeds morphing into birds mid-flight,
+led by one hero bird with wings wide open just below the moon.
 
 Why it should excite the judge:
 
-1. **Excitement** — one look is a jolt: a river of light tearing upward into a galaxy.
-2. **Surprise** — water that defies gravity and becomes stars. Not an explosion, not a firework, not a generic action scene: a quiet mountain lake doing something impossible.
-3. **Momentum** — a single diagonal sweep from the bottom-left lake to the top-right galaxy, with spray and streaks all pointing the same way.
-4. **Craft** — clean flat shapes, soft glows, a seeded star field, no smears and no garbled text.
-5. **Reads small** — at ~300 px the whole idea is still one bright diagonal against a dark sky, with the galaxy and the words `LOOK UP.` legible.
+1. **Excitement** — a jolt of gold-on-indigo at first glance: a whole sky
+   in motion from one small flower.
+2. **Surprise** — the smallest, quietest thing in the field becomes a
+   flock. Not an explosion, not a firework, not a generic action scene:
+   a transformation no one expects from a dandelion.
+3. **Momentum** — a single diagonal sweep from the bottom-left dandelion
+   to the top-right moon, with speed streaks and a light trail all
+   pointing the same way.
+4. **Craft** — clean flat shapes, soft glows, a seeded star field, no
+   smears and no garbled text.
+5. **Reads small** — at ~300 px the whole idea is still three big shapes:
+   dandelion, flock, moon.
 
 ## How it is made
 
-`main.ts` is a Node 22 program, standard library only, no network. It rasterises the image into its own pixel buffer (supersampled 2x for clean edges), encodes it as a PNG with `node:zlib`, and writes one file to `/output/entry.png`. Every random-looking element (stars, galaxy arms, spray) comes from a seeded generator, so both runs produce byte-identical output:
+`main.py` is a Python 3.13 program, standard library only, no network.
+It rasterises the image into its own pixel buffer, encodes it as a PNG
+with `zlib`, and writes one file to `/output/entry.png`. Every
+random-looking element (stars, filaments, flock scatter) comes from a
+seeded generator, so both runs produce byte-identical output:
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
 ## Badges
